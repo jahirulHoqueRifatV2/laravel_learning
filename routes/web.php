@@ -15,10 +15,10 @@
 //     return view('welcome');
 // });
 
-Route::get('/', function () {
+Route::get('/{id}', function ($id) {
+;
 
-    $request_value = request('id');
-    return $request_value;
-
-    //return view('welcome');
+    return view('welcome',[
+        'id' => $id
+    ]);
 });
