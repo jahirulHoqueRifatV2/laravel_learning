@@ -6,7 +6,7 @@
 </head>
 <body>
     <h1>My Blog Posts</h1>
-    <h2>{{$post}}</h2>
+    <h2>{{$post->body}}</h2>
 
 </body>
 </html>

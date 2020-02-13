@@ -15,4 +15,5 @@
 //     return view('welcome');
 // });
 
-Route::get('/post/{post}', 'PostController@show');
+Route::get('/post/{key}', 'PostController@show');
+

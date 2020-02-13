@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Posts;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
-class PostController extends Controller
+class PostsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,31 +41,21 @@ class PostController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Posts  $posts
      * @return \Illuminate\Http\Response
      */
-    public function show($key)
+    public function show(Posts $posts)
     {
-
-        $post =  DB::table('posts')->where('key_word',$key)->first();
-
-
-        if(!$post){
-            abort(404);
-        }
-
-        return view('post',[
-            'post' => $post
-        ]);
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Posts  $posts
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Posts $posts)
     {
         //
     }
@@ -74,10 +64,10 @@ class PostController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Posts  $posts
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Posts $posts)
     {
         //
     }
@@ -85,10 +75,10 @@ class PostController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Posts  $posts
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Posts $posts)
     {
         //
     }
