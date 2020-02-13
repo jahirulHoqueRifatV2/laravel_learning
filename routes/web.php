@@ -15,10 +15,4 @@
 //     return view('welcome');
 // });
 
-Route::get('/{id}', function ($id) {
-;
-
-    return view('welcome',[
-        'id' => $id
-    ]);
-});
+Route::get('/post/{post}', 'PostController@show');
