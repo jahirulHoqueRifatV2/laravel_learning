@@ -17,3 +17,14 @@ Route::get('/', function () {
 
 Route::get('/post/{key}', 'PostController@show');
 
+
+Route::get('/project', function () {
+    return view('project.home');
+});
+Route::get('/project/home', function () {
+    return view('project.home');
+});
+
+Route::get('/project/about', function () {
+    return view('project.about');
+});
